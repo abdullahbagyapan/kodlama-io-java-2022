@@ -2,10 +2,10 @@ package oop1;
 
 public class Product {
 
-    String name;
-    String imageUrl;
-    Integer unitsInStock;
-    double unitPrice;
-    double discount;
+    private String name;
+    private String imageUrl;
+    private Integer unitsInStock;
+    private double unitPrice;
+    private double discount;
 
 }
