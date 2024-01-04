@@ -6,13 +6,13 @@ public class Main {
         
         Product product = new Product();
 
-        product.name = "Lenovo Thinkpad";
-        product.unitPrice = 350;
-        product.discount = 10;
-        product.unitsInStock = 50;
-        product.imageUrl = "productImage/lenovo-thinkpad";
+        product.setName("Lenovo Thinkpad");
+        product.setUnitPrice(350);
+        product.setDiscount(10);
+        product.setUnitsInStock(50);
+        product.setImageUrl("productImage/lenovo-thinkpad");
 
-        
+
     }
     
 }
