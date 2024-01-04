@@ -4,7 +4,7 @@ public class IndividualCustomer extends Customer{
 
     private String name;
 
-    public String setName() {
+    public String getName() {
         return name;
     }
 
