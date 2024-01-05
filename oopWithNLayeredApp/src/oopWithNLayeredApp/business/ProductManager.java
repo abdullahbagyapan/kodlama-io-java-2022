@@ -1,14 +1,20 @@
 package oopWithNLayeredApp.business;
 
+import java.util.List;
+
+import oopWithNLayeredApp.core.logging.LoggerI;
 import oopWithNLayeredApp.dataAccess.ProductDaoI;
 import oopWithNLayeredApp.entities.Product;
 
 public class ProductManager {
 
     private ProductDaoI productDao;
-    // loose dependency
-    public ProductManager(ProductDaoI productDao) {
+
+    private List<LoggerI> loggers;
+
+    public ProductManager(ProductDaoI productDao,List<LoggerI> loggers) {
         this.productDao = productDao;
+        this.loggers = loggers;
     }
 
     public void insert(Product product) {
@@ -19,6 +25,8 @@ public class ProductManager {
         }
 
         productDao.insert(product);
+
+        loggers.forEach(logger -> logger.log(product.getName()));
     }
     
 }
