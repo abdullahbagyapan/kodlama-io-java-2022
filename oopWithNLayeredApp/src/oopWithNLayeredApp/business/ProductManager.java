@@ -1,6 +1,7 @@
 package oopWithNLayeredApp.business;
 
-import oopWithNLayeredApp.dataAccess.JdbcProductDao;
+import oopWithNLayeredApp.dataAccess.HibernateProductDao;
+import oopWithNLayeredApp.dataAccess.ProductDaoI;
 import oopWithNLayeredApp.entities.Product;
 
 public class ProductManager {
@@ -12,7 +13,7 @@ public class ProductManager {
             throw new IllegalArgumentException("The unit price cannot be less than 10");
         }
 
-        JdbcProductDao productDao = new JdbcProductDao();
+        ProductDaoI productDao = new HibernateProductDao();
         productDao.insert(product);
     }
     
